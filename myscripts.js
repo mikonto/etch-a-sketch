@@ -7,3 +7,9 @@ for (let i = 0; i < gridSize; i++) {
     grid.append(tag);
 
 }
+
+document.querySelectorAll('.gridbox').forEach(item => {
+    item.addEventListener('mouseenter', event => {
+        item.classList.add("hover");
+    })
+  })

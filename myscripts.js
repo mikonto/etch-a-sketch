@@ -19,23 +19,41 @@ function newGrid(){ // create a new grid
     for (let i = 0; i < horizontalCells; i++) { // create horizontal cells
         let horizontalCell = document.createElement("div");
         horizontalCell.className = "horizontal-cell";
-        // horizontalCell.id = i;
         container.append(horizontalCell);
-    
+        
         for (let j = 0; j < verticalCells; j++) { // create vertical cells
             let verticalCell = document.createElement("div");
-            // verticalCell.id = `h${i}w${j}`;
             verticalCell.className = "vertical-cell";
             horizontalCell.append(verticalCell);
         }
     }
     
     document.querySelectorAll('.vertical-cell').forEach(item => { // change color of the vertical cell when hovering with mouse
-        item.addEventListener('mouseenter', event => {
-            item.classList.add("hover"); // adds color by adding .hover-class
-            // item.style.backgroundColor = "#" + ((1<<24)*Math.random() | 0).toString(16); // adds random color
-        })
-      })
+    item.addEventListener('mouseover', event => {
+        
+    // UNCOMMENT ONE OF THESE   
+        
+        // 1. adds color into cells by adding .hover-class
+    // item.classList.add("hover"); 
+    
+        // 2. adds random color
+    // item.style.backgroundColor = "#" + ((1<<24)*Math.random() | 0).toString(16);
+    
+       // 3. adds 10% opacity with each mouseover
+    let opacity = Number(event.target.getAttribute('data-opacity')); 
+    if(opacity < 1) {
+        opacity += 0.1;
+        event.target.setAttribute('data-opacity', opacity);
+    }
+    event.target.style.backgroundColor = `rgb(0,0,0,${opacity})`;
+    
+    })
+    })    
 }
+
+    
+
+
+
 
 

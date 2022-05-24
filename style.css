@@ -1,20 +1,32 @@
+#btn {
+    margin:auto;
+    display:block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
 #container {
-    display: flex;    
-    justify-content: center;
+    margin: auto;
+    display: flex;
+    width: 50rem;
+    height: 50rem;
+    border: 3px solid darkblue;
 }
 
-#verticalContainer {
+.horizontal-cell {
     display: flex;
     flex-direction: column;
+    background-color: white;
+    flex: 1;
 }
 
-.cell {
+.vertical-cell {
     background-color: white;
-    width: 1rem;
-    height: 1rem;
     border: solid 1px darkblue;
+    flex: 1;
 }
 
 .hover {
     background-color: darkblue;
+    opacity: 1;
 }

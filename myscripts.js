@@ -37,15 +37,15 @@ function newGrid(){ // create a new grid
     // item.classList.add("hover"); 
     
         // 2. adds random color
-    // item.style.backgroundColor = "#" + ((1<<24)*Math.random() | 0).toString(16);
+    item.style.backgroundColor = "#" + ((1<<24)*Math.random() | 0).toString(16);
     
        // 3. adds 10% opacity with each mouseover
-    let opacity = Number(event.target.getAttribute('data-opacity')); 
-    if(opacity < 1) {
-        opacity += 0.1;
-        event.target.setAttribute('data-opacity', opacity);
-    }
-    event.target.style.backgroundColor = `rgb(0,0,0,${opacity})`;
+    // let opacity = Number(event.target.getAttribute('data-opacity')); 
+    // if(opacity < 1) {
+    //     opacity += 0.1;
+    //     event.target.setAttribute('data-opacity', opacity);
+    // }
+    // event.target.style.backgroundColor = `rgb(0,0,0,${opacity})`;
     
     })
     })    

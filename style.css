@@ -8,8 +8,8 @@
 #container {
     margin: auto;
     display: flex;
-    width: 50rem;
-    height: 50rem;
+    width: 70vmin;
+    height: 70vmin;
     border: 3px solid darkblue;
 }
 

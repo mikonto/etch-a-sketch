@@ -13,14 +13,14 @@
     border: 3px solid darkblue;
 }
 
-.horizontal-cell {
+.cell-container {
     display: flex;
     flex-direction: column;
     background-color: white;
     flex: 1;
 }
 
-.vertical-cell {
+.cell {
     background-color: white;
     border: solid 1px darkblue;
     flex: 1;

@@ -1,14 +1,14 @@
 document.getElementById("btn").addEventListener("click", newGrid); // create a new grid when pressing the button
 
 function newGrid(){ // create a new grid
-    let horizontalCells = prompt("How many horizontal cells?"); // create horizontal cells
-    while (horizontalCells > 100) {  
-        horizontalCells = prompt("Please enter a number between 1 and 100!"); 
+    let cellContainer = prompt("How many horizontal cells?"); // create horizontal cells
+    while (cellContainer > 100) {  
+        cellContainer = prompt("Please enter a number between 1 and 100!"); 
     } 
     
-    let verticalCells = prompt("How many vertical cells?"); // create vertical cells
-    while (verticalCells > 100) {  
-        verticalCells = prompt("Please enter a number between 1 and 100!");  
+    let cell = prompt("How many vertical cells?"); // create vertical cells
+    while (cell > 100) {  
+        cell = prompt("Please enter a number between 1 and 100!");  
     } 
     
     let container = document.getElementById("container"); // remove the cells from the container
@@ -16,19 +16,19 @@ function newGrid(){ // create a new grid
         container.removeChild(container.firstChild);
     }
     
-    for (let i = 0; i < horizontalCells; i++) { // create horizontal cells
-        let horizontalCell = document.createElement("div");
-        horizontalCell.className = "horizontal-cell";
-        container.append(horizontalCell);
+    for (let i = 0; i < cellContainer; i++) { // create horizontal cells
+        let cellContainer = document.createElement("div");
+        cellContainer.className = "cell-container";
+        container.append(cellContainer);
         
-        for (let j = 0; j < verticalCells; j++) { // create vertical cells
-            let verticalCell = document.createElement("div");
-            verticalCell.className = "vertical-cell";
-            horizontalCell.append(verticalCell);
+        for (let j = 0; j < cell; j++) { // create vertical cells
+            let cell = document.createElement("div");
+            cell.className = "cell";
+            cellContainer.append(cell);
         }
     }
     
-    document.querySelectorAll('.vertical-cell').forEach(item => { // change color of the vertical cell when hovering with mouse
+    document.querySelectorAll('.cell').forEach(item => { // change color of the vertical cell when hovering with mouse
     item.addEventListener('mouseover', event => {
         
     // UNCOMMENT ONE OF THESE   
